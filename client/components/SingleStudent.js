@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchSingleStudent} from '../redux/store';
 
+
 const avgGrade = (tests) => {
   return Math.round(
     tests.map((test) => test.grade).reduce((x, y) => x + y) / tests.length
@@ -61,7 +62,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loadSingleStudent: (id) => dispatch(fetchSingleStudent(id))
+  loadSingleStudent: (id) => dispatch(fetchSingleStudent(id)),
+
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleStudent);
