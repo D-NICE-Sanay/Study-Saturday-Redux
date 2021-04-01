@@ -30,10 +30,6 @@ class StudentList extends React.Component {
               <button onClick={() => this.handleDelete(student.id)}>
                 DELETE STUDENT
               </button>
-              {/* also works */}
-              {/* <button onClick={this.handleDelete(student.id)}>
-                DELETE STUDENT
-              </button> */}
             </div>
           </li>
         ))}
